@@ -1,0 +1,15 @@
+
+.menu-item > .row {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(1, 1fr);
+  column-gap: 8px; 
+
+  .col{
+      overflow: hidden;
+  }
+  .col:nth-child(1) {
+    grid-column: 1 / 3 span;
+  }
+}

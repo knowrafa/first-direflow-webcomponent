@@ -1,12 +1,12 @@
 import { DireflowComponent } from "direflow-component";
-import EstabelecimentoList from "./EstabelecimentoList";
+import MenuList from "./MenuList";
 
-export const estabelecimentoComponentName = "estabelecimento-component"
+export const menuListApp = "menu-component"
 
 export default DireflowComponent.create({
-  component: EstabelecimentoList,
+  component: MenuList,
   configuration: {
-    tagname: estabelecimentoComponentName,
+    tagname: menuListApp,
   },
   plugins: [
     {

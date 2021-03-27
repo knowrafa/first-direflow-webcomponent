@@ -5,6 +5,7 @@ import usuarioItemStyle from "./UsuarioItem/UsuarioItem.scss"
 import api from "utils/api";
 import UsuarioItem from "./UsuarioItem";
 
+export const usuarioAppId = "usuario-app"
 interface Props {}
 
 const UsuarioList: React.FC<Props> = () => {
@@ -33,6 +34,7 @@ const UsuarioList: React.FC<Props> = () => {
 
   return (
     <Styled styles={[styles, usuarioItemStyle]}>
+      <div id={usuarioAppId}>
       <ul className="default-list zebra">
         <li className="default-list-item usuario-item no-feedback">
           <div className="row">
@@ -46,6 +48,7 @@ const UsuarioList: React.FC<Props> = () => {
           <UsuarioItem {...usuario} key={usuario.id} />
         ))}
       </ul>
+      </div>
     </Styled>
   );
 };

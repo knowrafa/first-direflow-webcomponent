@@ -5,6 +5,8 @@ import { Styled } from "direflow-component";
 import api from "utils/api";
 import ArquivoIndexadoItem from "./ArquivoIndexadoItem";
 
+export const arquivoIndexadoAppId = "arquivo-indexado-app"
+
 const ArquivoIndexadoList: React.FC = () => {
   const [arquivos, setArquivos] = useState([]);
   const [carregou, setCarregou] = useState(false);
@@ -28,6 +30,7 @@ const ArquivoIndexadoList: React.FC = () => {
   }, [carregou]);
   return (
     <Styled styles={[styles, arquivoIndexadoStyle]}>
+      <div id={arquivoIndexadoAppId}>
       <ul className="default-list zebra">
         <li className="default-list-item arquivo-indexado-item no-feedback">
           <div className="row">
@@ -43,6 +46,7 @@ const ArquivoIndexadoList: React.FC = () => {
           <ArquivoIndexadoItem {...arquivo} key={arquivo.id} />
         ))}
       </ul>
+      </div>
     </Styled>
   );
 };
